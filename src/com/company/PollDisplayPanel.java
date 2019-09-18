@@ -52,11 +52,11 @@ public class PollDisplayPanel extends JPanel
   // Returns a string representation of this object
   public String toString()
   {
-    return   _______________________________ +
+    return   name1 + count1 +
 
-        ____________________________________ +
+        name2 + count2 +
 
-        ________________________________ ;
+        name3 + count3 ;
   }
 
   // Redefines JPanel's paintComponent to draw this pie chart
@@ -95,9 +95,9 @@ public class PollDisplayPanel extends JPanel
       degrees = countToDegrees(count1, total);
       drawSector(g, x, y, r, fromDegree, degrees);
 
-      _________________________________________________
+      //_________________________________________________
 
-      ...
+     // ...
     }
     else
     {
@@ -113,11 +113,11 @@ public class PollDisplayPanel extends JPanel
     y += (r + 20);
     g.setColor(Color.BLACK);
 
-    g.drawString( _______________ , x - r, y);
+    //g.drawString( _______________ , x - r, y);
 
-    g.drawString( _______________ , x, y);
+    //g.drawString( _______________ , x, y);
 
-    g.drawString( _______________ , x + r, y);
+    //g.drawString( _______________ , x + r, y);
 
 
     // Display the color squares:
@@ -152,7 +152,7 @@ public class PollDisplayPanel extends JPanel
   public static void main (String [] args)
   {
     PollDisplayPanel votingMachine =
-            new PollDisplayPanel("Tami", "Brian", "Liz");
+            new PollDisplayPanel("Tami: ", " Brian: ", " Liz: ");
     votingMachine.vote1();
     votingMachine.vote2();
     votingMachine.vote2();
