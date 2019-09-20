@@ -49,7 +49,7 @@ public class PollControlPanel extends JPanel
       chartPanel.vote2();
     else if (button == button3)
       chartPanel.vote3();
-    chartPanel.repaint();
+      chartPanel.repaint();
   }
 
 }
