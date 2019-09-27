@@ -13,15 +13,18 @@ public class MathEx {
     public static void main(String[] args) {
         int z = swap(123);
         System.out.println(z);
+        timeLeft(1, 15, 4, 36);
         timeLeft(1, 34, 8, 20);
     }
     private static void timeLeft(int curHour, int curMin, int depHour, int depMin){
         int d = depHour * 60;
         d = d + depMin;
         int e = curHour * 60;
-        e = e
-        System.out.print(d + " hours ");
-        System.out.print(e + " minutes");
+        e = e + curMin;
+        int f = d - e;
+        int g = f/60;
+        int h = f%60;
+        System.out.println(g + " hours " + h + " minutes");
 
     }
 }
