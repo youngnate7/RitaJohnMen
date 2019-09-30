@@ -15,6 +15,18 @@ public class MathEx {
         System.out.println(z);
         timeLeft(1, 15, 4, 36);
         timeLeft(1, 34, 8, 20);
+        int j = dayOfWeek(0, 1);
+        System.out.println(j);
+        j = dayOfWeek(0, 14);
+        System.out.println(j);
+        j = dayOfWeek(6, 22);
+        System.out.println(j);
+        j = dayOfWeek(5, 4);
+        System.out.println(j);
+        j = dayOfWeek(1, 24);
+        System.out.println(j);
+        j = dayOfWeek(2, 1);
+        System.out.println(j);
     }
     private static void timeLeft(int curHour, int curMin, int depHour, int depMin){
         int d = depHour * 60;
@@ -27,4 +39,10 @@ public class MathEx {
         System.out.println(g + " hours " + h + " minutes");
 
     }
+    private static int dayOfWeek(int jan1, int date){
+        int i = (date + jan1) - 1;
+        i = i%7;
+        return i;
+    }
+
 }
